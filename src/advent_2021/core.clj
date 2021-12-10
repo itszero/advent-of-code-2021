@@ -10,6 +10,7 @@
 (require 'advent-2021.day7)
 (require 'advent-2021.day8)
 (require 'advent-2021.day9)
+(require 'advent-2021.day10)
 (require 'clojure.java.io)
 
 (def -main
@@ -24,4 +25,5 @@
          "day6" advent-2021.day6/main
          "day7" advent-2021.day7/main
          "day8" advent-2021.day8/main
-         "day9" advent-2021.day9/main) file))))
+         "day9" advent-2021.day9/main
+         "day10" advent-2021.day10/main) file))))
