@@ -4,6 +4,9 @@
   (println name val)
   val)
 
+(defn max-by [f coll]
+  (reduce #(if (> (f %2) (f %1)) %2 %1) coll))
+
 (defn find-map-by-val [hm val]
   (->> (keys hm)
        (filter #(= val (hm %)))
