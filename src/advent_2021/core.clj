@@ -1,7 +1,6 @@
 (ns advent-2021.core
   (:gen-class))
 
-(require '[advent-2021.utils :refer [debug]])
 (require '[clojure.string :as str])
 (require '[clojure.java.io :as jio])
 
