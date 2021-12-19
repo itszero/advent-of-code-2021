@@ -20,3 +20,13 @@
 (defn map-map-values [f m]
   (map-map (fn [key value] {key (f value)}) m))
 
+(defn pick
+  ([num coll] (pick num coll '[]))
+  ([num coll stack]
+   (if (= num 0)
+     [stack]
+     (mapcat #(pick
+                (dec num)
+                (vec (concat (subvec coll 0 %) (subvec coll (inc %))))
+                (conj stack (nth coll %)))
+             (range 0 (count coll))))))
